@@ -1,24 +1,40 @@
-import React from 'react';
-import logo from './logo.svg';
+import React, { useEffect, useState,useRef } from 'react';
 import './App.css';
 
+import TopBar from './Components/HeaderComponent/TopBar';
+import SliderComp from './Components/SliderComponent/SliderComp';
+import Container from './Components/ContainerComponent/Container';
+
+
 function App() {
+
+  const [cname, setCName] = useState(false);
+
+  const pageRef=useRef();
+
+  useEffect(()=>{
+    pageRef.current.addEventListener('scroll',(e) => {  
+      // console.log(cname,e.target.scrollTop)
+      if (e.target.scrollTop >= 342 ) {
+        // console.log('fixnav')
+        setCName(true);
+      } else if(e.target.scrollTop < 342 ) {
+        // console.log('nav')
+        setCName(false);
+      }
+    })
+  },[])
+ 
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+      <TopBar />
+      <div className="page" ref={pageRef}>
+        <SliderComp />
+        {/* <ButtonComp /> */}
+        <Container scrolled={cname}/>
+      </div>
+
     </div>
   );
 }

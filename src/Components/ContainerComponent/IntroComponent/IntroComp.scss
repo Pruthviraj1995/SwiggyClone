@@ -1,0 +1,110 @@
+.introcomp{
+    display: flex;
+    justify-content: space-between;
+    overflow: hidden;
+    background-color: white;
+    margin: 2rem 0rem;
+}
+
+.introdetails{
+    display: flex;
+    // border: 1px solid;
+}
+
+.introimg{
+    height: 5rem;
+    width: 6rem;
+    margin-right: 1rem;
+}
+
+.introcontent{
+    display: flex;
+    flex-direction: column;
+    margin-right: 1rem;
+    text-align: start;
+    // overflow: hidden;
+    width: 20rem;
+    // border: 1px solid;
+}
+
+.introtitle{
+    font-size: 1.3rem;
+    font-weight: bold;
+}
+
+.introdesc{
+    font-size: 0.8rem;
+    font-weight: 400;
+    color: rgb(122, 107, 107);
+}
+
+.introbtn{
+    display: flex;
+    width: fit-content;
+    align-self: center;
+    background-color: rgb(228,109,71);
+    color: white;
+    
+    &:hover{
+        box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
+        
+    }
+}
+
+.pagefixedd{
+    position: sticky;
+    top: 0;
+    transition: all 0.5s ease-in-out;
+
+    .introcomp{
+        display: flex;
+        justify-content: space-between;
+        margin: 2rem 1rem 2rem 0rem;
+        background-color: red;
+        overflow: hidden;
+    }
+    
+    .introdetails{
+        display: flex;
+        // border: 1px solid;
+        margin: 1rem 1rem 1rem 0rem;
+    }
+    
+    .introimg{
+        height: 2.5rem;
+        width: 2.5rem;
+        margin-right: 1rem;
+    }
+    
+    .introcontent{
+        flex-direction: column;
+        margin-right: 1rem;
+        text-align: start;
+        width: 20rem;
+    }
+    
+    .introtitle{
+        font-size: 1rem;
+        font-weight: bold;
+    }
+    
+    .introdesc{
+        width: 100%;
+        font-size: 0.8rem;
+        font-weight: 400;
+        color: rgb(122, 107, 107);
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    }
+    
+    .introbtn{
+        display: flex;
+        width: fit-content;
+        align-self: center;
+        
+        &:hover{
+            box-shadow: 0px 3px 10px 1px rgba(0, 0, 0, 0.4);
+        }
+    }
+}

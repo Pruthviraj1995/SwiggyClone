@@ -1,0 +1,102 @@
+.foodcard{
+    display: flex;
+    // flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid white;
+    background-color: whitesmoke;
+    padding: 1rem 0rem 1rem 1rem;
+}
+
+.cardview{
+    height: 22rem;
+    width: 17rem;
+    border: 1px solid white;
+    padding: 1rem 1rem 2rem 1rem;
+    display: flex;
+    flex-direction: column;
+    cursor: pointer;
+    margin: 0rem 1rem 1rem 0rem;
+    
+    &:hover{
+    border: 1px solid rgb(216, 183, 183);
+    // box-shadow: 0px 2px 0.4px 0px rgba(0, 0, 0, 0.2);
+
+    .offerstag{
+        border-top: 1px solid rgb(245, 217, 217);
+        border-bottom: 1px solid rgb(245, 217, 217);
+    }
+
+    .quickview{
+        visibility: visible;
+    }
+    }
+}
+
+.foodimg{
+    height: 10rem;
+    width: 100%;
+}
+
+.pricetag{
+    // border: 1px solid;
+    display: flex;
+    white-space: nowrap;
+    justify-content: space-between;
+    font-size: 14px;
+    font-size: 0.8rem;
+    margin-top: 10px;
+}
+
+.ratings{
+    background-color: orange;
+    padding: 0px 5px;
+    color: white;
+    background-color: rgb(87, 146, 87);
+}
+
+.restaurant{
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    margin-top: 10px;
+
+    :first-child{
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    font-weight: 500;
+    font-size: 1.1rem;
+    }
+
+    :last-child{
+        text-overflow: ellipsis;
+        // white-space: nowrap;
+        font-weight: 300;
+    }
+}
+
+.offerstag{
+    display: flex;
+    white-space: nowrap;
+    padding: 5px 0px;
+    margin-top: 10px;
+    border-top: 1px solid rgb(245, 217, 217);
+    font-size: 0.85rem;
+    color: red;
+}
+
+.offerimg{
+    height: 1rem;
+    width: 1rem;
+    margin-right: 0.5rem;
+}
+
+.quickview{
+    margin-top: 5px;
+    font-weight: bold;
+    visibility: hidden;
+    color: rgb(157, 76, 233);
+    text-decoration: none;
+    font-size: 0.8rem;
+    display: flex;
+    justify-content: center;
+}

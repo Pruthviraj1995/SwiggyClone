@@ -1,0 +1,103 @@
+.navbar{
+    height: 26rem;
+    flex:none;
+    width: 15rem;
+    overflow: hidden;
+
+    &:hover{
+        overflow-y: scroll;
+    }
+}
+
+/* width */
+ ::-webkit-scrollbar {
+    width: 5px;
+    background: rgb(228,109,71);
+  }
+  
+  /* Track */
+  ::-webkit-scrollbar-track {
+    background: rgb(228,109,71); 
+
+  }
+   
+  /* Handle */
+    ::-webkit-scrollbar-thumb {
+    background: rgb(228,109,71); 
+  }
+  
+  /* Handle on hover */
+  ::-webkit-scrollbar-track:hover {
+    background: rgb(228,109,71); 
+  }
+
+.pagefixed{
+    position: fixed;
+    top: 180px;
+    min-height: 15px;
+}
+
+.selected{
+    background-color: rgb(228,109,71);
+    color: white;
+    height: 5rem;
+    width: 100%;
+    // border: 1px solid black;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-align: start;
+}
+
+.menubtn{
+    height: 5rem;
+    width: 100%;
+    // border: 1px solid black;
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    box-shadow: none;
+    text-align: start;
+
+    &:hover{
+        color: rgb(228,109,71);
+
+        .menu-img{
+            transform: scale(1.2);
+            z-index: -1;
+        }
+
+    }
+}
+
+.menu-img{
+    height: 3rem;
+    width: 3rem;
+    margin-right: 1.5rem;
+    z-index: 1;
+}
+
+img{
+    height: 3rem;
+    width: 3rem;
+}
+
+.menu-content{
+    height: 3rem;
+    // border: 1px solid;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.menu-title{
+    font-size: 1.1rem;
+    font-weight: 700;
+}
+
+.menu-desc{
+    font-size: 10px;
+    display: flex;
+    font-weight: 300;
+}
